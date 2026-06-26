@@ -28,7 +28,6 @@ tags = {
   name        = "Orbit Labs Storage"
   managedBy   = "Spacelift"
   mission     = "First Launch"
-  project     = "Orbit-labs"
   environment = "demo"
 }
 }
