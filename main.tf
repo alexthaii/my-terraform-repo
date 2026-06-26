@@ -68,3 +68,15 @@ resource "aws_s3_bucket" "orbit_storage2" {
     environment = "demo"
   }
 }
+
+resource "aws_s3_bucket" "orbit_storage3" {
+  bucket_prefix = "orbit-storage3-"
+
+  tags = {
+    name        = "Orbit Labs Storage"
+    managedBy   = "Spacelift"
+    mission     = "First Launch"
+    project     = "Orbit-labs"
+    environment = "demo"
+  }
+}
