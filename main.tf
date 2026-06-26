@@ -48,11 +48,23 @@ resource "random_pet" "orbit_mascot" {
 resource "aws_s3_bucket" "orbit_storage" {
   bucket_prefix = "orbit-storage-"
 
-tags = {
-  name        = "Orbit Labs Storage"
-  managedBy   = "Spacelift"
-  mission     = "First Launch"
-  project     = "Orbit-labs"
-  environment = "demo"
+  tags = {
+    name        = "Orbit Labs Storage"
+    managedBy   = "Spacelift"
+    mission     = "First Launch"
+    project     = "Orbit-labs"
+    environment = "demo"
+  }
 }
+
+resource "aws_s3_bucket" "orbit_storage2" {
+  bucket_prefix = "orbit-storage2-"
+
+  tags = {
+    name        = "Orbit Labs Storage"
+    managedBy   = "Spacelift"
+    mission     = "First Launch"
+    project     = "Orbit-labs"
+    environment = "demo"
+  }
 }
