@@ -93,9 +93,9 @@ resource "aws_s3_bucket" "orbit_storage4" {
   }
 }
 
-resource "aws_s3_bucket" "orbit_storage5" {
-  bucket_prefix = "orbit-storage5-"
-
+resource "aws_instance" "demo" {
+  ami    = "ami-0c02fb55956c7d316"
+  instance_type = "t3.micro"
   tags = {
     name        = "Orbit Labs Storage"
     managedBy   = "Spacelift"
