@@ -46,7 +46,7 @@ resource "random_pet" "orbit_mascot" {
 }
 
 resource "aws_s3_bucket" "blast_radius_demo" {
-  count = 101
+  count = 102
 
   bucket_prefix = "blast-radius-demo-"
 
