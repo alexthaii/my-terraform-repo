@@ -45,4 +45,28 @@ resource "random_pet" "orbit_mascot" {
   length = 2
 }
 
+resource "aws_s3_bucket" "blast_radius_demo" {
+  count = 101
 
+  bucket_prefix = "blast-radius-demo-"
+
+  tags = {
+    name        = "Orbit Labs Storage"
+    managedBy   = "Spacelift"
+    mission     = "First Launch"
+    project     = "Orbit-labs"
+    environment = "demo"
+  }
+}
+
+# resource "aws_instance" "demo" {
+#   ami    = "ami-0c02fb55956c7d316"
+#   instance_type = "t3.micro"
+#   tags = {
+#     name        = "Orbit Labs Storage"
+#     managedBy   = "Spacelift"
+#     mission     = "First Launch"
+#     project     = "Orbit-labs"
+#     environment = "demo"
+#   }
+# }
